@@ -7,11 +7,12 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
 
 const db = mysql.createConnection({
-  host: process.env.HOST, // IP address of the server
-  user: process.env.USER,
-  password: process.env.PASSWORD,
+  host: process.env.DATABASE_HOST, // IP address of the server
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE,
-  port: process.env.PORT,
+  port: process.env.DATABASE_PORT,
+  // port: process.env.PORT,
 });
 
 const publicDirectory = path.join(__dirname, "./public");

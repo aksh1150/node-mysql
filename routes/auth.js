@@ -10,5 +10,4 @@ app.get("/", (req, res) => {
 
 */
 router.post("/register", authController.register);
-
 module.exports = router;
